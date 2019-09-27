@@ -94,26 +94,51 @@ def head(x, y, n, a):
     changeCoords(circle(0, 0, 14), [(x, y), (x + a*n*12, y + n*16)])
     changeCoords(circle(0, 0, 14), [(x + a*n*54, y), (x + a*n*66, y + n*16)])
     brushColor("white")
-    changeCoords(circle(0, 0, 14), [(x + a*n*16, y + n*19), (x + a*n*28, y + n*23)])
-    changeCoords(circle(0, 0, 14), [(x + a*n*38, y + n*19), (x + a*n*50, y + n*23)])
-    polygon([(x + a*n*18, y + n*41), (x + a*n*21, y + n*33), (x + a*n*24, y + n*37)])
-    polygon([(x + a*n*42, y + n*37), (x + a*n*45, y + n*33), (x + a*n*48, y + n*41)])
-    polyline([(x + a*n*16, y + n*42), (x + a*n*24, y + n*37), (x + a*n*33, y + n*36), (x + a*n*42, y + n*37), (x + a*n*50, y + n*42)])
+    polyline([(x + a*n*16, y + n*30), (x + a*n*24, y + n*37), (x + a*n*33, y + n*36), (x + a*n*42, y + n*37), (x + a*n*50, y + n*30)])
     brushColor("black")
-    changeCoords(circle(0, 0, 14), [(x + a*n*20, y + n*19), (x + a*n*23, y + n*23)])
-    changeCoords(circle(0, 0, 14), [(x + a*n*42, y + n*19), (x + a*n*46, y + n*23)])
-
-
+  
 # main part of the doc
 sky()
 grass()
-fence(100, 10, 500, 330, 13)
-fence(0, 170, 250, 330, 17)
-fence(0, 270, 200, 400, 13)
-fence(240, 230, 520, 370, 15)
+
+z0=10
+while z0<300:
+    fence(100, z0, 500, z0 + 20, 20)
+    z0+=20
+z1=170
+while z1<370:
+    fence(0, z1, 260, z1 + 13, 20)
+    z1+=13
+z2=200
+while z2<390:
+    fence(240, z2, 500, z2 + 10, 30)
+    z2+=10
+z3=270
+while z3<400:
+    fence(0, z3, 200, z3 + 8, 25)
+    z3+=8
+
+
 dog(200, 520, 1.2, -1)
+
 dog(30, 350, 1, 1)
 dog(500, 330, 1, -1)
 house()
 dog(330, 510, 5, 1)
+brushColor(255,255,255)
+circle (50, 370, 5)
+circle (72, 370, 5)
+circle (148, 540, 6)
+circle (174, 540, 6)
+circle (457, 350, 5)
+circle (480, 350, 5)
+circle (430, 585, 12)
+brushColor(0,0,0)
+circle (50, 370, 2)
+circle (72, 370, 2)
+circle (148, 540, 3)
+circle (174, 540, 3)
+circle (457, 350, 2)
+circle (480, 350, 2)
+circle (430, 585, 6)
 run()

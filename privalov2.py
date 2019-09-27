@@ -88,17 +88,18 @@ def body(x, y, n, a):
     changeCoords(circle(0, 0, 14), [(x, y), (x + a*n*90, y + n*50)])
 
 
-def head(x, y, n, a):
+def head(x, y, n, a): # голова
     penSize(1)
+  
     rectangle(x + a*n*8, y, x + a*n*58, y + n*50)
     changeCoords(circle(0, 0, 14), [(x, y), (x + a*n*12, y + n*16)])
     changeCoords(circle(0, 0, 14), [(x + a*n*54, y), (x + a*n*66, y + n*16)])
     brushColor("white")
-    changeCoords(circle(0, 0, 14), [(x + a*n*16, y + n*19), (x + a*n*28, y + n*23)])
-    changeCoords(circle(0, 0, 14), [(x + a*n*38, y + n*19), (x + a*n*50, y + n*23)])
-    polygon([(x + a*n*18, y + n*41), (x + a*n*21, y + n*33), (x + a*n*24, y + n*37)])
-    polygon([(x + a*n*42, y + n*37), (x + a*n*45, y + n*33), (x + a*n*48, y + n*41)])
-    polyline([(x + a*n*16, y + n*42), (x + a*n*24, y + n*37), (x + a*n*33, y + n*36), (x + a*n*42, y + n*37), (x + a*n*50, y + n*42)])
+    circle(70,550,10)
+    circle(110,550,10)
+    
+
+    polyline([(x + a*n*16, y + n*30), (x + a*n*24, y + n*37), (x + a*n*33, y + n*36), (x + a*n*42, y + n*37), (x + a*n*50, y + n*30)])
     brushColor("black")
     changeCoords(circle(0, 0, 14), [(x + a*n*20, y + n*19), (x + a*n*23, y + n*23)])
     changeCoords(circle(0, 0, 14), [(x + a*n*42, y + n*19), (x + a*n*46, y + n*23)])
@@ -107,7 +108,19 @@ def head(x, y, n, a):
 # main part of the doc
 sky()
 grass()
-fence(0, 130, 500, 400, 16)
+fence(0, 130, 500, 155, 20) # квадратный забор
+fence(0, 155, 500, 180, 20)
+fence(0, 180, 500, 205, 20)
+fence(0, 205, 500, 230, 20)
+fence(0, 230, 500, 255, 20)
+fence(0, 255, 500, 280, 20)
+fence(0, 305, 500, 330, 20)
+fence(0, 280, 500, 305, 20)
+fence(0, 330, 500, 355, 20)
+fence(0, 330, 500, 355, 20)
+fence(0, 355, 500, 380, 20)
+fence(0, 380, 500, 405, 20)
+fence(0, 405, 500, 430, 20)
 dog(50, 520, 1.2, 1)
 house()
 run()
